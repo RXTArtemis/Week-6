@@ -40,7 +40,7 @@ function buildDeck(){
  }
  return deck;
 }
-console.log(testDeck);
+
 
 //shuffling deck
 
@@ -54,7 +54,7 @@ function shuffleDeck(deck){
 
 let testDeck= buildDeck();
 shuffleDeck(testDeck);
-console.log(testDeck);
+
 
 for(let i=0; i<26;i++){
     player1Cards.push(deck[i]);
@@ -138,7 +138,7 @@ function declareWinner(){
         console.log("Winner is Player 1!")
     }else if(p1Score<p2Score){
         console.log("Winner is Player 2!")
-    }else(p1Score === p2Score)
+    }else{
     console.log("Draw. We have a tie.")
     }
     console.log("Player 1 score:"+ p1Score);
@@ -151,14 +151,6 @@ function loser(){
         console.log("Player 1 lost. Winner is Player 2!");
     }else if(player2Cards===0 && player1Cards>0){
         console.log("Player 2 lost. Winner is Player 1!")
+        }
     }
 }
-
-
-
-
-//buildDeck();
-//shuffleDeck();
-//cardPlay();
-//scoreBox();
-//loser();
