@@ -40,7 +40,7 @@ function buildDeck(){
  }
  return deck;
 }
-console.log(deck);
+console.log(testDeck);
 
 //shuffling deck
 
