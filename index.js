@@ -31,15 +31,17 @@ console.log(suits);
 console.log(ranks);
 
 //building deck
-function buildDeck(){
+function buildDeck(rankCounter,suitCounter){
  for(let suitCounter=0; suitCounter <4; suitCounter++){
     for(let rankCounter=0; rankCounter<13; rankCounter++){
         deck.push(ranks[rankCounter]+suits[suitCounter]);
         console.log(ranks[rankCounter]+suits[suitCounter]);
     }
  }
- return deck;
+
+return deck;
 }
+console.log(testDeck)
 
 
 //shuffling deck
@@ -52,8 +54,10 @@ function shuffleDeck(deck){
 
  }
 
-let testDeck= buildDeck();
-shuffleDeck(testDeck);
+ 
+ let testDeck= buildDeck();
+ shuffleDeck(testDeck);
+ console.log(testDeck)
 
 
 for(let i=0; i<26;i++){
@@ -94,12 +98,12 @@ constructor(){
 }
 declareWinner();
 
-function compareCards(secondCard){
-    if(this.rank>secondCard.rank){
+function compareCards(player1Plays,player2Plays){
+    if(this.rank,this.suits>secondCard.rank,secondCard.suits){
         return +1;
-    }else if(this.rank<secondCard.rank){
+    }else if(this.rank,this.suits<secondCard.rank,secondCard.suits){
         return -1;
-    }else if(this.rank==secondCard.rank){
+    }else{
         return 0;
     }
 }
